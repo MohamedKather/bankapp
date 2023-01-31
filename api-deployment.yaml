@@ -26,9 +26,9 @@ spec:
       containers:
         - env:
             - name: SPRING_DATASOURCE_PASSWORD
-              value: admin
+              value: Kather@123
             - name: SPRING_DATASOURCE_URL
-              value: jdbc:postgresql://PostgreSQL:5432/Comany_DB
+              value: jdbc:postgresql://PostgreSQL:5432/company_db
             - name: SPRING_DATASOURCE_USERNAME
               value: postgres
             - name: SPRING_JPA_HIBERNATE_DDL_AUTO
@@ -36,7 +36,7 @@ spec:
           image: bankingapptest.jar
           name: API
           ports:
-            - containerPort: 8085
+            - containerPort: 9090
           resources: {}
       restartPolicy: Always
 status: {}

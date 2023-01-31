@@ -26,9 +26,9 @@ spec:
       containers:
         - env:
             - name: POSTGRES_DB
-              value: Comany_DB
+              value: company_db
             - name: POSTGRES_PASSWORD
-              value: admin
+              value: Kather@123
             - name: POSTGRES_USER
               value: postgres
           image: postgres

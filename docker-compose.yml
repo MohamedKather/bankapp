@@ -2,19 +2,19 @@ version: '2'
 
 services:
   app:
-    image: 'chaashish/bankingapptest.jar:latest'
+    image: 'mohamedkather/bankingapptest.jar:latest'
     build:
       context: .
     container_name: app
     restart: always
     ports:
-      - 8090:8090
+      - 9090:9090
     depends_on:
       - db    
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/Comany_DB
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/company_db
       - SPRING_DATASOURCE_USERNAME=postgres
-      - SPRING_DATASOURCE_PASSWORD=admin
+      - SPRING_DATASOURCE_PASSWORD=Kather@123
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
           
   db:
@@ -22,8 +22,8 @@ services:
     container_name: db
     environment:
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=admin
-      - POSTGRES_DB=Comany_DB
+      - POSTGRES_PASSWORD=Kather@123
+      - POSTGRES_DB=company_db
     volumes:
       - ./dbsaaa/init.sql:/docker-entrypoint-initdb.d/create_tables.sql 
     expose:
